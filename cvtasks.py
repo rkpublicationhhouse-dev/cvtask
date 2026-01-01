@@ -15,7 +15,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("Computer Vision Tasks Demonstration")
+st.title("Demonstration : Computer Vision Tasks")
 st.info("**Tip:** For the most accurate results, please upload simple images of cats or dogs. Avoid overlapping objects or cluttered backgrounds.")
 
 # --- CLEAR LOGIC: Detect Mode Change ---
@@ -61,7 +61,7 @@ model = get_model(task)
 # --- IMAGE UPLOAD (Using dynamic key to force reset) ---
 # The key changes whenever 'mode' changes, clearing the uploaded file
 uploaded_file = st.file_uploader(
-    "📤 Upload an image to analyze...", 
+    " Upload an image to analyze...", 
     type=["jpg", "png", "jpeg"],
     key=f"uploader_{st.session_state['uploader_key']}"
 )
@@ -92,4 +92,5 @@ if uploaded_file:
         else:
             count = len(results[0].boxes)
             st.info(f"**Found:** {count} object(s)")
+
 
