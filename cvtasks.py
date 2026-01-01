@@ -25,7 +25,7 @@ if 'previous_mode' not in st.session_state:
     st.session_state['uploader_key'] = 0
 
 # --- SIDEBAR ---
-st.sidebar.header("Navigation")
+st.sidebar.header("Choose the options")
 
 mode = st.sidebar.selectbox(
     "1. Select Mode",
@@ -92,3 +92,4 @@ if uploaded_file:
         else:
             count = len(results[0].boxes)
             st.info(f"**Found:** {count} object(s)")
+
