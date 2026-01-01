@@ -19,7 +19,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("Computer Vision Tasks Demonstration")
-
+st.info("** Tip:** For the most accurate results, please upload simple images of cats or dogs. Avoid overlapping objects or cluttered backgrounds.")
 # --- SIDEBAR: HIERARCHICAL DROPDOWNS ---
 st.sidebar.header("Navigation")
 
@@ -93,3 +93,4 @@ if uploaded_file:
         else:
             count = len(results[0].boxes)
             st.info(f"**Found:** {count} object(s)")
+
