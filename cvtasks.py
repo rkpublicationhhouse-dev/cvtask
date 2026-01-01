@@ -28,7 +28,7 @@ if 'previous_mode' not in st.session_state:
 st.sidebar.header("Choose the options")
 
 mode = st.sidebar.selectbox(
-    "1. Select CV Task",
+    "1. Select no. of objects",
     ("Single Object", "Multiple Objects")
 )
 
@@ -92,6 +92,7 @@ if uploaded_file:
         else:
             count = len(results[0].boxes)
             st.info(f"**Found:** {count} object(s)")
+
 
 
 
